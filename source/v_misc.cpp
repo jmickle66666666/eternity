@@ -523,6 +523,18 @@ void V_DrawDistortedBackground(const char *patchname, VBuffer *back_dest)
    back_dest->TileBlock64(back_dest, src);
 }
 
+//
+// V_DarkenBackground
+//
+// Darken the background as opposed to drawing a flat over it.
+// by jmickle
+//
+void V_DarkenBackground(VBuffer *back_dest)
+{
+	back_dest->ColorBlockTL(back_dest, 0, 0, 0, back_dest->width, back_dest->height, 32767);
+}
+
+
 //=============================================================================
 //
 // Init

@@ -163,7 +163,7 @@ menu_t menu_main =
    NULL, NULL, NULL,           // pages
    97, 64,
    0,
-   mf_skullmenu | mf_emulated, // 08/30/06: use emulated flag
+   mf_darkenbg | mf_skullmenu | mf_emulated, // 08/30/06: use emulated flag
    MN_MainMenuDrawer
 };
 
@@ -183,7 +183,7 @@ menu_t menu_main_doom2 =
    NULL, NULL, NULL,           // pages
    97, 72,
    0,
-   mf_skullmenu | mf_emulated, // 08/30/06: use emulated flag
+   mf_darkenbg | mf_skullmenu | mf_emulated, // 08/30/06: use emulated flag
    MN_MainMenuDrawer
 };
 
@@ -332,7 +332,7 @@ menu_t menu_episode =
    NULL, NULL, NULL,           // pages
    48, 63,                     // x, y offsets
    0,                          // select episode 1
-   mf_skullmenu | mf_emulated, // skull menu
+   mf_darkenbg | mf_skullmenu | mf_emulated, // skull menu
    MN_EpisodeDrawer            // drawer
 };
 
@@ -446,7 +446,7 @@ menu_t menu_d2episode =
    NULL, NULL, NULL,           // pages
    48, 63,                     // x, y offsets
    0,                          // select episode 1
-   mf_skullmenu | mf_emulated, // skull menu
+   mf_darkenbg | mf_skullmenu | mf_emulated, // skull menu
    MN_D2EpisodeDrawer,         // drawer
 };
 
@@ -531,7 +531,7 @@ menu_t menu_newgame =
    NULL, NULL, NULL,   // pages
    48, 63,             // x,y offsets
    0,                        // starting item (overridden by open method)
-   mf_skullmenu|mf_emulated, // is a skull menu
+   mf_darkenbg | mf_skullmenu | mf_emulated, // is a skull menu
    MN_DrawNewGame,     // drawer method
    NULL, NULL,         // toc
    0,                  // gap override
@@ -544,7 +544,7 @@ menu_t menu_newmission =
    NULL, NULL, NULL,         // pages
    48, 63,                   // x, y
    0,                        // starting item
-   mf_skullmenu|mf_emulated, // flags
+   mf_darkenbg | mf_skullmenu | mf_emulated, // flags
    MN_DrawNewGame,           // drawer
    NULL, NULL,               // toc
    0,                        // gap override
@@ -628,7 +628,7 @@ menu_t menu_startmap =
    NULL, NULL, NULL,     // pages
    40, 15,               // x,y offsets
    7,                    // starting item: start map
-   mf_leftaligned | mf_background, 
+   mf_leftaligned | mf_darkenbg,
 };
 
 const char *str_startmap[] = {"ask", "no", "yes"};
@@ -672,7 +672,7 @@ menu_t menu_demos =
    NULL, NULL, NULL,  // pages
    200, 15,           // x,y
    3,                 // start item
-   mf_background,     // full screen
+   mf_darkenbg,     // full screen
 };
 
 VARIABLE_STRING(mn_demoname,     NULL,           12);
@@ -807,7 +807,7 @@ menu_t menu_loadwad =
    &menu_loadwad,               // rootpage
    120, 15,                     // x,y offsets
    4,                           // starting item
-   mf_background,               // full screen 
+   mf_darkenbg,               // full screen 
    NULL,
    mn_wad_names,
    mn_wad_pages,
@@ -821,7 +821,7 @@ menu_t menu_wadmisc =
    &menu_loadwad, // rootpage
    200, 15,
    4,
-   mf_background,
+   mf_darkenbg,
    NULL,
    mn_wad_names,
    mn_wad_pages,
@@ -835,7 +835,7 @@ menu_t menu_wadiwads1 =
    &menu_loadwad, // rootpage
    200, 15,
    4,
-   mf_background,
+   mf_darkenbg,
    NULL,
    mn_wad_names,
    mn_wad_pages,
@@ -849,7 +849,7 @@ menu_t menu_wadiwads2 =
    &menu_loadwad, // rootpage
    200, 15,
    4,
-   mf_background,
+   mf_darkenbg,
    NULL,
    mn_wad_names,
    mn_wad_pages,
@@ -863,7 +863,7 @@ menu_t menu_wadiwads3 =
    &menu_loadwad,
    200, 15,
    4,
-   mf_background,
+   mf_darkenbg,
    NULL,
    mn_wad_names,
    mn_wad_pages,
@@ -925,7 +925,7 @@ menu_t menu_gamesettings =
    &menu_gamesettings,           // rootpage
    164, 15,
    3,                            // start
-   mf_background,                // full screen
+   mf_darkenbg,                // full screen
    NULL,                         // no drawer
    mn_gset_names,                // TOC stuff
    mn_gset_pages,
@@ -988,7 +988,7 @@ menu_t menu_advanced =
    &menu_gamesettings,           // rootpage
    200, 15,
    3,                            // start
-   mf_background,                // full screen
+   mf_darkenbg,                // full screen
    NULL,                         // no drawer
    mn_gset_names,                // TOC stuff
    mn_gset_pages,
@@ -1052,7 +1052,7 @@ menu_t menu_dmflags =
    &menu_gamesettings, // rootpage
    200, 15,
    2,
-   mf_background,     // full screen
+   mf_darkenbg,     // full screen
    MN_DMFlagsDrawer,
    mn_gset_names,     // TOC stuff
    mn_gset_pages,
@@ -1164,7 +1164,7 @@ menu_t menu_chatmacros =
    &menu_gamesettings,                   // rootpage
    25, 15,                               // x, y offset
    2,                                    // chatmacro0 at start
-   mf_background,                        // full-screen
+   mf_darkenbg,                        // full-screen
    NULL,                                 // no drawer
    mn_gset_names,                        // TOC stuff
    mn_gset_pages,
@@ -1203,7 +1203,7 @@ menu_t menu_player =
    NULL, NULL, NULL,                     // pages
    180, 5,                               // x, y offset
    2,                                    // chatmacro0 at start
-   mf_background,                        // full-screen
+   mf_darkenbg,                        // full-screen
    MN_PlayerDrawer
 };
 
@@ -1426,7 +1426,7 @@ menu_t menu_loadgame =
    NULL, NULL, NULL,                 // pages
    80, 44,                           // x, y
    0,                                // starting slot
-   mf_skullmenu | mf_emulated,       // skull menu
+   mf_darkenbg | mf_skullmenu | mf_emulated,       // skull menu
    MN_LoadGameDrawer,
 };
 
@@ -1567,7 +1567,7 @@ menu_t menu_savegame =
    NULL, NULL, NULL,                 // pages
    80, 44,                           // x, y
    0,                                // starting slot
-   mf_skullmenu | mf_emulated,       // skull menu
+   mf_darkenbg | mf_skullmenu | mf_emulated,       // skull menu
    MN_SaveGameDrawer,
 };
 
@@ -1708,7 +1708,7 @@ menu_t menu_options =
    &menu_options,                        // rootpage
    100, 15,                              // x,y offsets
    3,                                    // starting item: first selectable
-   mf_background|mf_centeraligned,       // draw background: not a skull menu
+   mf_darkenbg | mf_centeraligned,       // draw background: not a skull menu
    NULL,                                 // no drawer
    mn_optionpg_names,                    // TOC stuff
    mn_options_pages
@@ -1743,7 +1743,7 @@ menu_t menu_optionsp2 =
    &menu_options, // rootpage
    100, 15,
    3,
-   mf_background|mf_centeraligned,
+   mf_darkenbg | mf_centeraligned,
    NULL,
    mn_optionpg_names,
    mn_options_pages
@@ -2051,7 +2051,7 @@ menu_t menu_video =
    &menu_video,          // rootpage
    200, 15,              // x,y offset
    3,                    // start on first selectable
-   mf_background,        // full-screen menu
+   mf_darkenbg,        // full-screen menu
    MN_VideoModeDrawer,
    mn_vidpage_names,
    mn_vidpage_menus
@@ -2117,7 +2117,7 @@ menu_t menu_sysvideo =
    &menu_video,          // rootpage
    200, 15,              // x,y offset
    3,                    // start on first selectable
-   mf_background,        // full-screen menu
+   mf_darkenbg,        // full-screen menu
    NULL,
    mn_vidpage_names,
    mn_vidpage_menus
@@ -2149,7 +2149,7 @@ menu_t menu_video_pg2 =
    &menu_video,          // rootpage
    200, 15,              // x,y offset
    3,                    // start on first selectable
-   mf_background,        // full-screen menu
+   mf_darkenbg,        // full-screen menu
    NULL,
    mn_vidpage_names,
    mn_vidpage_menus
@@ -2182,7 +2182,7 @@ menu_t menu_particles =
    &menu_video,          // rootpage
    200, 15,              // x,y offset
    3,                    // start on first selectable
-   mf_background,        // full-screen menu
+   mf_darkenbg,        // full-screen menu
    NULL,
    mn_vidpage_names,
    mn_vidpage_menus
@@ -2221,7 +2221,7 @@ menu_t menu_vidadv =
    &menu_video,          // rootpage
    200, 15,              // x,y offset
    3,                    // start on first selectable
-   mf_background,        // full-screen menu
+   mf_darkenbg,        // full-screen menu
    NULL,
    mn_vidpage_names,
    mn_vidpage_menus
@@ -2278,7 +2278,7 @@ menu_t menu_sound =
    &menu_sound,          // root page
    180, 15,              // x, y offset
    3,                    // first selectable
-   mf_background,        // full-screen menu
+   mf_darkenbg,        // full-screen menu
    NULL,
    mn_sndpage_names,
    mn_sndpage_menus
@@ -2311,7 +2311,7 @@ menu_t menu_soundeq =
    &menu_sound,          // root page
    180, 15,              // x, y offset
    3,                    // first selectable
-   mf_background,        // full-screen menu
+   mf_darkenbg,        // full-screen menu
    NULL,
    mn_sndpage_names,
    mn_sndpage_menus
@@ -2371,7 +2371,7 @@ menu_t menu_mouse =
    &menu_mouse,                  // rootpage
    200, 15,                      // x, y offset
    2,                            // first selectable
-   mf_background,                // full-screen menu
+   mf_darkenbg,                // full-screen menu
    NULL,                         // no drawer
    mn_mousejoy_names,            // TOC stuff
    mn_mousejoy_pages,
@@ -2406,7 +2406,7 @@ menu_t menu_mouse_accel_and_mlook =
    &menu_mouse,                    // rootpage
    200, 15,                        // x, y offset
    3,                              // first selectable
-   mf_background,                  // full-screen menu
+   mf_darkenbg,                  // full-screen menu
    NULL,                           // no drawer
    mn_mousejoy_names,              // TOC stuff
    mn_mousejoy_pages,
@@ -2567,7 +2567,7 @@ menu_t menu_joystick =
    &menu_mouse,                    // rootpage
    200, 15,                        // x,y offset
    2,                              // start on first selectable
-   mf_background,                  // full-screen menu
+   mf_darkenbg,                  // full-screen menu
    NULL,                           // no drawer
    mn_mousejoy_names,              // TOC stuff
    mn_mousejoy_pages,
@@ -2806,7 +2806,7 @@ menu_t menu_hud =
    &menu_hud,             // rootpage
    200, 15,               // x,y offset
    3,
-   mf_background,
+   mf_darkenbg,
    NULL,                  // no drawer
    mn_hud_names,          // TOC stuff
    mn_hud_pages,
@@ -2820,7 +2820,7 @@ menu_t menu_hud_pg2 =
    &menu_hud,             // rootpage
    200, 15,               // x,y offset
    3,
-   mf_background,
+   mf_darkenbg,
    MN_HUDPg2Drawer,       // drawer
    mn_hud_names,          // TOC stuff
    mn_hud_pages,
@@ -2899,7 +2899,7 @@ menu_t menu_statusbar =
    NULL, NULL, NULL,       // pages
    200, 15,
    2,
-   mf_background,
+   mf_darkenbg,
 };
 
 CONSOLE_COMMAND(mn_status, 0)
@@ -3003,7 +3003,7 @@ menu_t menu_automapcol1 =
    &menu_automapcol1,      // rootpage
    200, 15,                // x,y
    4,                      // starting item
-   mf_background,          // fullscreen
+   mf_darkenbg,          // fullscreen
    NULL,
    mn_automap_names,       // TOC stuff
    mn_automap_pages,
@@ -3017,7 +3017,7 @@ menu_t menu_automapcol2 =
    &menu_automapcol1,       // rootpage
    200, 15,                 // x,y
    4,                       // starting item
-   mf_background,           // fullscreen
+   mf_darkenbg,           // fullscreen
    NULL,
    mn_automap_names,        // TOC stuff
    mn_automap_pages,
@@ -3031,7 +3031,7 @@ menu_t menu_automapcol3 =
    &menu_automapcol1,         // rootpage
    200, 15,                   // x,y
    4,                         // starting item
-   mf_background,             // fullscreen
+   mf_darkenbg,             // fullscreen
    NULL,
    mn_automap_names,          // TOC stuff
    mn_automap_pages,
@@ -3045,7 +3045,7 @@ menu_t menu_automap4 =
    &menu_automapcol1,         // rootpage
    200, 15,                   // x,y
    4,                         // starting item
-   mf_background,             // fullscreen
+   mf_darkenbg,             // fullscreen
    NULL,
    mn_automap_names,          // TOC stuff
    mn_automap_pages,
@@ -3106,7 +3106,7 @@ menu_t menu_weapons =
    &menu_weapons,                       // rootpage
    200, 15,                             // x,y offset
    4,                                   // starting item
-   mf_background,                       // full screen
+   mf_darkenbg,                       // full screen
    NULL,                                // no drawer
    mn_weapons_names,                    // TOC stuff
    mn_weapons_pages,
@@ -3207,7 +3207,7 @@ menu_t menu_compat1 =
    &menu_compat1,       // rootpage
    270, 5,              // x,y
    3,                   // starting item
-   mf_background,       // full screen
+   mf_darkenbg,       // full screen
    NULL,                // no drawer
    mn_compat_contents,  // TOC arrays
    mn_compat_pages,
@@ -3221,7 +3221,7 @@ menu_t menu_compat2 =
    &menu_compat1,       // rootpage
    270, 5,              // x,y
    3,                   // starting item
-   mf_background,       // full screen
+   mf_darkenbg,       // full screen
    NULL,                // no drawer
    mn_compat_contents,  // TOC arrays
    mn_compat_pages,
@@ -3234,7 +3234,7 @@ menu_t menu_compat3 =
    &menu_compat1,       // rootpage
    270, 5,              // x, y
    3,                   // starting item
-   mf_background,       // full screen
+   mf_darkenbg,       // full screen
    NULL,                // no drawer
    mn_compat_contents,  // TOC arrays
    mn_compat_pages,
@@ -3276,7 +3276,7 @@ menu_t menu_enemies =
    NULL, NULL, NULL,      // pages
    220,15,                // x,y offset
    3,                     // starting item
-   mf_background          // full screen
+   mf_darkenbg          // full screen
 };
 
 CONSOLE_COMMAND(mn_enemies, 0)
@@ -3376,7 +3376,7 @@ menu_t menu_movekeys =
    &menu_movekeys,          // rootpage
    150, 15,                 // x,y offsets
    4,
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
    mn_binding_contentnames, // table of contents arrays
    mn_binding_contentpages,
@@ -3390,7 +3390,7 @@ menu_t menu_advkeys =
    &menu_movekeys,          // rootpage
    150, 15,                 // x,y offsets
    4,
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
    mn_binding_contentnames, // table of contents arrays
    mn_binding_contentpages,
@@ -3440,7 +3440,7 @@ menu_t menu_weaponbindings =
    &menu_movekeys,          // rootpage
    150, 15,                 // x,y offsets
    4,
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
    mn_binding_contentnames, // table of contents arrays
    mn_binding_contentpages,
@@ -3481,7 +3481,7 @@ menu_t menu_envbindings =
    &menu_movekeys,          // rootpage
    150, 15,                 // x,y offsets
    4,
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
    mn_binding_contentnames, // table of contents arrays
    mn_binding_contentpages,
@@ -3524,7 +3524,7 @@ menu_t menu_funcbindings =
    &menu_movekeys,          // rootpage
    150, 15,                 // x,y offsets
    4,
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
    mn_binding_contentnames, // table of contents arrays
    mn_binding_contentpages,
@@ -3569,7 +3569,7 @@ menu_t menu_menukeys =
    &menu_movekeys,          // rootpage
    150, 15,                 // x,y offsets
    4,
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
    mn_binding_contentnames, // table of contents arrays
    mn_binding_contentpages,
@@ -3614,7 +3614,7 @@ menu_t menu_automapkeys =
    &menu_movekeys,          // rootpage
    150, 15,                 // x,y offsets
    4,
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
    mn_binding_contentnames, // table of contents arrays
    mn_binding_contentpages,
@@ -3655,7 +3655,7 @@ menu_t menu_consolekeys =
    &menu_movekeys,          // rootpage
    150, 15,                 // x,y offsets
    4,
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
    mn_binding_contentnames, // table of contents arrays
    mn_binding_contentpages,
@@ -3825,7 +3825,7 @@ menu_t menu_menuopts =
    NULL,                    // root page
    200, 15,                 // x,y offsets
    3,                       // first item
-   mf_background,           // draw background: not a skull menu
+   mf_darkenbg,           // draw background: not a skull menu
    NULL,                    // no drawer
 };
 
@@ -3855,7 +3855,7 @@ menu_t menu_config =
    NULL,
    200, 15,
    3,
-   mf_background,
+   mf_darkenbg,
    NULL,
 };
 
@@ -3984,7 +3984,7 @@ menu_t menu_old_options =
    NULL, NULL, NULL,           // pages
    60, 37,
    0,
-   mf_skullmenu | mf_emulated,
+   mf_darkenbg | mf_skullmenu | mf_emulated,
    MN_OldOptionsDrawer
 };
 
@@ -4024,7 +4024,7 @@ menu_t menu_old_sound =
    NULL, NULL, NULL,
    80, 64,
    0,
-   mf_skullmenu | mf_emulated,
+   mf_darkenbg | mf_skullmenu | mf_emulated,
    MN_OldSoundDrawer
 };
 

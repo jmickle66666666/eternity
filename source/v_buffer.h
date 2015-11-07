@@ -49,6 +49,8 @@ struct VBuffer
    void (*MaskedBlockDrawer)(int, int, VBuffer *, int, int, int, 
                              byte *, byte *);
    void (*TileBlock64)(VBuffer *, byte *);
+   void(*ColorBlockTL)(VBuffer *buffer, byte color, int x, int y,
+	   int w, int h, int tl);
 
    // SoM: Include the screen size
    bool  scaled, freelookups;

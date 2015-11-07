@@ -621,11 +621,13 @@ void V_SetBlockFuncs(VBuffer *buffer, int drawtype)
       buffer->BlockDrawer       = V_BlockDrawer;
       buffer->MaskedBlockDrawer = V_MaskedBlockDrawer;
       buffer->TileBlock64       = V_TileBlock64;
+	  buffer->ColorBlockTL = V_ColorBlockTL;
       break;
    case DRAWTYPE_GENSCALED:
       buffer->BlockDrawer       = V_BlockDrawerS;
       buffer->MaskedBlockDrawer = V_MaskedBlockDrawerS;
       buffer->TileBlock64       = V_TileBlock64S;
+	  buffer->ColorBlockTL = V_ColorBlockTLScaled;
       break;
    default:
       break;

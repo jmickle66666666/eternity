@@ -482,6 +482,13 @@ void MN_DrawMenu(menu_t *menu)
       V_DrawBackground(mn_background_flat, &vbscreen);
    }
 
+   if (menu->flags & mf_darkenbg)
+   {
+	   // draw a transparent color instead of a flat
+	   y -= GameModeInfo->menuOffset;
+	   V_DarkenBackground(&vbscreen);
+   }
+
    // haleyjd: calculate widest width for LALIGNED flag
    MN_CalcWidestWidth(menu);
 

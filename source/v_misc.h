@@ -134,6 +134,9 @@ void V_DrawBackgroundCached(byte *src, VBuffer *back_dest);
 void V_DrawBackground(const char *patchname, VBuffer *back_dest);
 void V_DrawDistortedBackground(const char* patchname, VBuffer *back_dest);
 
+// darken background --jmickle
+void V_DarkenBackground(VBuffer *back_dest);
+
 // SoM: replaced globals with a struct and a single global
 typedef struct cb_video_s
 {
