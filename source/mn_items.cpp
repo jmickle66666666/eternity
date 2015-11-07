@@ -431,7 +431,7 @@ public:
       int x = item->x;
       int y = item->y;
 
-      if(drawing_menu->flags & mf_background)
+      if(drawing_menu->flags & (mf_background | mf_darkenbg))
       {
          // include gap on fullscreen menus
          if(item->flags & MENUITEM_LALIGNED)
