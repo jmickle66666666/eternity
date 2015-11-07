@@ -531,7 +531,9 @@ void V_DrawDistortedBackground(const char *patchname, VBuffer *back_dest)
 //
 void V_DarkenBackground(VBuffer *back_dest)
 {
-	back_dest->ColorBlockTL(back_dest, 0, 0, 0, back_dest->width, back_dest->height, 32767);
+	back_dest->ColorBlockTL(back_dest, 0, //palette index to darken with
+		0, 0, back_dest->width, back_dest->height, 45000 //darken amount, 0-65535
+		); 
 }
 
 

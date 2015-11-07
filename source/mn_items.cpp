@@ -884,7 +884,7 @@ public:
 
       G_BoundKeys(item->data, boundkeys);
 
-      if(drawing_menu->flags & mf_background)
+      if(drawing_menu->flags & (mf_background | mf_darkenbg))
       {
          // include gap on fullscreen menus
          x += MENU_GAP_SIZE;
